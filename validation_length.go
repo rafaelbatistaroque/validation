@@ -11,7 +11,7 @@ type LengthRule struct {
 func (r *LengthRule) Validate(value string, fieldName string) error {
 	length := len(value)
 
-	if length != r.Exactly {
+	if r.Exactly > 0 && length != r.Exactly {
 		return fmt.Errorf(Err_PARAMETER_SHOULD_HAVE_EXACTLY_CHARACTER.Error(), fieldName, r.Exactly)
 	}
 

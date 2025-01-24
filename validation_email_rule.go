@@ -13,7 +13,7 @@ func (r *EmailRule) Validate(value string, fieldName string) error {
 	re := regexp.MustCompile(regex)
 
 	if !re.MatchString(value) {
-		return fmt.Errorf("'%s' is not a valid email address", fieldName)
+		return fmt.Errorf(Err_PARAMETER_EMAIL_INVALID.Error(), fieldName)
 	}
 
 	return nil

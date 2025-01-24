@@ -14,4 +14,7 @@ var (
 	Err_PARAMETER_SHOULD_HAVE_DIGIT_CHARACTER   = errors.New("parameter %s should have at least one digit character")
 	Err_PARAMETER_SHOULD_HAVE_EXACTLY_CHARACTER = errors.New("parameter %s must have exactly %d characters")
 	Err_PARAMETER_SHOULD_BE_SOCIAL_URL_INVALID  = errors.New("parameter %s is not a valid social media URL")
+	Err_PARAMETER_EMAIL_INVALID                 = errors.New("parameter %s is not a valid email address")
+	Err_PARAMETER_SHOULD_BE_WITHIN_LIST         = errors.New("parameter %s should be one of the allowed values: %v")
+	Err_PARAMETER_SHOULD_BE_OF_LIST             = errors.New("parameter %s is invalid")
 )

@@ -5,7 +5,7 @@ type EqualRule struct {
 }
 
 func (r *EqualRule) Validate(value string, fieldName string) error {
-	if r.Equal == value {
+	if r.Equal != value {
 		return Err_PARAMETER_INVALID
 	}
 

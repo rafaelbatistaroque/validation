@@ -6,7 +6,7 @@ import (
 )
 
 type ValidationRule interface {
-	Validate(value string, fieldName string) error
+	Validate(value any, fieldName string) error
 }
 
 type Rule struct {

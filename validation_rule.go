@@ -38,3 +38,7 @@ func (i *Rule) GetErrors() error {
 
 	return errors.New(strings.Join(i.errors, "\n"))
 }
+
+func (i *Rule) AddError(err error) {
+	i.errors = append(i.errors, err.Error())
+}
